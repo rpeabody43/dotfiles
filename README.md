@@ -6,7 +6,7 @@ Repo for hidden dot files in my home directory, such as .bashrc and .gitconfig
 
 - [Reference](https://www.youtube.com/watch?v=r_MpUP6aKiQ)
 - Add files to the repo proper
-- Set up symlinks for them **ONLY POSSIBLE IN CMD**:
+- Set up symlinks for them **For Windows with CMD**:
   ```
   mklink "destination" "root"
   mklink ~/.bashrc ~/.dotfiles/.bashrc
