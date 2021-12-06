@@ -6,10 +6,10 @@ Repo for hidden dot files in my home directory, such as .bashrc and .gitconfig
 
 - [Reference](https://www.youtube.com/watch?v=r_MpUP6aKiQ)
 - Add files to the repo proper
-- Set up symlinks for them:
+- Set up symlinks for them **ONLY POSSIBLE IN CMD**:
   ```
-  ln -s ~/.dotfiles/.bashrc ~/.bashrc
-  ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+  mklink "destination" "root"
+  mklink ~/.bashrc ~/.dotfiles/.bashrc
   ```
 - add a brewfile with stuff like VS Code, Chrome, and Git Bash
 - Use this as an opportunity to learn bash as a language to automate this (test in a vm ig idfk)
