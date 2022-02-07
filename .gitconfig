@@ -5,3 +5,5 @@
 [user]
 	email = rpeabody43@gmail.com
 	name = Ryan Peabody
+[init]
+	defaultBranch = main
