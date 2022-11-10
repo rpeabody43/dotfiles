@@ -1,5 +1,5 @@
 [core]
-	editor = \"C:\\Users\\rpeab\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	editor = \"C:\\Users\\rpeab\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 	symlinks = true
 [user]
 	email = rpeabody43@gmail.com
