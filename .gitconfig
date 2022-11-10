@@ -1,6 +1,7 @@
 [core]
 	editor = \"C:\\Users\\rpeab\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 	symlinks = true
+	autocrlf = false
 [user]
 	email = rpeabody43@gmail.com
 	name = Ryan Peabody
