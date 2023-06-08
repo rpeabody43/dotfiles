@@ -1,6 +1,29 @@
 return require('packer').startup(function ()
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
+    
+    -- Mason Setup
+    require("mason").setup({
+        ensure_installed = {
+            "rust-analyzer",
+            "codelldb"
+        },
+        ui = {
+            icons = {
+                package_installed = "",
+                package_pending = "",
+                package_uninstalled = "",
+            },
+        }
+    })
+    require("mason-lspconfig").setup()
+
+    use ({
+        "j-hui/fidget.nvim",
+        config = function()
+          require("fidget").setup()
+        end
+    })
 
     use 'hrsh7th/nvim-cmp' 
 
