@@ -6,7 +6,8 @@ return require('packer').startup(function ()
     require("mason").setup({
         ensure_installed = {
             "rust-analyzer",
-            "codelldb"
+            "codelldb",
+            "pyright"
         },
         ui = {
             icons = {

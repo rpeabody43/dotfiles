@@ -49,6 +49,9 @@ local rust_tools_opts = {
 }
 
 require("rust-tools").setup(rust_tools_opts)
+local lspconfig = require("lspconfig")
+lspconfig.pyright.setup{}
+
 
 vim.diagnostic.config({
     virtual_text = true,
