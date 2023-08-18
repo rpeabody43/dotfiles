@@ -1,5 +1,5 @@
 New-Alias which Get-Command
-oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/bubblesextra.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'C:/Users/rpeab/.dotfiles/powershell/bubblesextra.omp.json' | Invoke-Expression
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
 # Be aware that if you are missing these lines from your profile, tab completion
