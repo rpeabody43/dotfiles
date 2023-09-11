@@ -19,7 +19,9 @@ set.smarttab = true
 
 set.mouse = "a"
 
+-- "hybrid" line numbers
 set.number = true
+set.relativenumber = true
 
 set.splitright = true
 set.splitbelow = true

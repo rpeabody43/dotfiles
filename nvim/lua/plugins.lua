@@ -65,8 +65,7 @@ return require('packer').startup(function ()
 	use 'airblade/vim-gitgutter' --show git changes in file
 	use 'alvan/vim-closetag' --autoclose html tags
 	use 'norcalli/nvim-colorizer.lua' --syntax highlighting
-	--this plugin causes an error whenever starting nerdtree
-	--use 'tiagofumo/vim-nerdtree-syntax-highlight' --file eplorer highlighting
+	use 'tiagofumo/vim-nerdtree-syntax-highlight' --file eplorer highlighting
 	use 'nvim-lua/plenary.nvim' --unsure what this does but seems important
 	use 'christoomey/vim-tmux-navigator' --easy navigation between panes
 	use 'bling/vim-airline' --nice status bar at bottom
