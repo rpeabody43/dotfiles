@@ -4,10 +4,10 @@ Repo for hidden dot files in my home directory, such as .bashrc and .gitconfig
 
 ## How to setup symlinks
 
-- **For Windows with CMD**:
+- **Using Custom Powershell Function**:
   ```
-  mklink "destination" "root"
-  mklink ~/.bashrc ~/.dotfiles/.bashrc
+  make-link "root" "destination"
+  make-link $HOME/.dotfiles/.bashrc $HOME/.bashrc 
   ```
 
 ## TODO
