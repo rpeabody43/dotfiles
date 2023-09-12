@@ -7,6 +7,9 @@ local sign = function(opts)
   })
 end
 
+-- fmt on save
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+
 sign({name = 'DiagnosticSignError', text = ''})
 sign({name = 'DiagnosticSignWarn', text = ''})
 sign({name = 'DiagnosticSignHint', text = ''})
@@ -51,7 +54,9 @@ local rust_tools_opts = {
 require("rust-tools").setup(rust_tools_opts)
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup{}
-
+lspconfig.clangd.setup{
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto","hpp"},
+}
 
 vim.diagnostic.config({
     virtual_text = true,

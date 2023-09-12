@@ -7,7 +7,8 @@ return require('packer').startup(function ()
         ensure_installed = {
             "rust-analyzer",
             "codelldb",
-            "pyright"
+            "pyright", 
+            "clangd"
         },
         ui = {
             icons = {
@@ -71,4 +72,5 @@ return require('packer').startup(function ()
 	use 'bling/vim-airline' --nice status bar at bottom
 	use 'vim-airline/vim-airline-themes' --themes for said nice status bar at bottom
 	use 'Xuyuanp/nerdtree-git-plugin' --show git changes in file explorer
+    use 'Raimondi/delimitMate' --close brackets, parentheses, etc.
 end)

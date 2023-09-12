@@ -17,6 +17,8 @@ set.expandtab = true
 set.smartindent = true
 set.smarttab = true
 
+vim.cmd('let delimitMate_expand_cr = 1')
+
 set.mouse = "a"
 
 -- "hybrid" line numbers
