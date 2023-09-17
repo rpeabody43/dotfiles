@@ -63,7 +63,7 @@ return require('packer').startup(function ()
 	use 'scrooloose/nerdtree' --file explorer
 	use 'ryanoasis/vim-devicons' --icons for nerdtree
 	use 'ellisonleao/gruvbox.nvim' --theme
-	use 'airblade/vim-gitgutter' --show git changes in file
+    use 'airblade/vim-gitgutter' --show git changes in file
 	use 'alvan/vim-closetag' --autoclose html tags
 	use 'norcalli/nvim-colorizer.lua' --syntax highlighting
 	use 'tiagofumo/vim-nerdtree-syntax-highlight' --file eplorer highlighting

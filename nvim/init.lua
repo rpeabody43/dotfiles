@@ -3,10 +3,15 @@ require('airline')
 require('nerdtree')
 require('lsp')
 
-vim.cmd('colorscheme gruvbox')
-
 local set = vim.opt
 local setg = vim.g
+
+-- colorscheme
+require('gruvbox').setup({
+    contrast = "hard"
+})
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 set.encoding = "utf-8"
 
