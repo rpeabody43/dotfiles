@@ -21,8 +21,10 @@ set.softtabstop = 4
 set.expandtab = true
 set.smartindent = true
 set.smarttab = true
+set.colorcolumn = "81";
 
-vim.cmd('let delimitMate_expand_cr = 1')
+require("nvim-autopairs").setup {}
+require('nvim-ts-autotag').setup()
 
 set.mouse = "a"
 
@@ -41,6 +43,14 @@ vim.keymap.set('n', '<C-h>', [[<C-w>h]], {noremap = false})
 vim.keymap.set('n', '<C-j>', [[<C-w>j]], {noremap = false})
 vim.keymap.set('n', '<C-k>', [[<C-w>k]], {noremap = false})
 vim.keymap.set('n', '<C-l>', [[<C-w>l]], {noremap = false})
+
+-- disable arrow keys
+for _, mode in pairs({ 'n', 'v', 'x' }) do
+    for _, key in pairs({ '<Up>', '<Down>', '<Left>', '<Right>' }) do
+        vim.keymap.set(mode, key, '<nop>')
+    end
+end
+
 
 set.backupdir="~/vimtmp//,."
 set.directory="~/vimtmp//,."

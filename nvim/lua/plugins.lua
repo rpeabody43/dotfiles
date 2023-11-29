@@ -8,7 +8,8 @@ return require('packer').startup(function ()
             "rust-analyzer",
             "codelldb",
             "pyright", 
-            "clangd"
+            "clangd",
+            "gopls"
         },
         ui = {
             icons = {
@@ -72,5 +73,6 @@ return require('packer').startup(function ()
 	use 'bling/vim-airline' --nice status bar at bottom
 	use 'vim-airline/vim-airline-themes' --themes for said nice status bar at bottom
 	use 'Xuyuanp/nerdtree-git-plugin' --show git changes in file explorer
-    use 'Raimondi/delimitMate' --close brackets, parentheses, etc.
+    use 'windwp/nvim-autopairs' --close brackets, parentheses, etc.
+    use 'windwp/nvim-ts-autotag'
 end)
