@@ -1,7 +1,5 @@
 require('plugins')
-require('airline')
-require('nerdtree')
-require('lsp')
+require('config')
 
 local set = vim.opt
 local setg = vim.g
@@ -108,3 +106,6 @@ require('nvim-treesitter.configs').setup {
     max_file_lines = nil,
   }
 }
+
+-- Neo-Tree Setup
+vim.keymap.set('n', '<C-b>', ':Neotree toggle <CR>')

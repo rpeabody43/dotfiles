@@ -1,3 +1,23 @@
+-- Mason Setup
+require("mason").setup({
+  ensure_installed = {
+      "rust-analyzer",
+      "codelldb",
+      "pyright", 
+      "clangd",
+      "gopls"
+  },
+  ui = {
+      icons = {
+          package_installed = "",
+          package_pending = "",
+          package_uninstalled = "",
+      },
+  }
+})
+require("mason-lspconfig").setup()
+
+
 -- LSP Diagnostics Options Setup 
 local sign = function(opts)
   vim.fn.sign_define(opts.name, {
