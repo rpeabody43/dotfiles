@@ -80,7 +80,7 @@ local plugins = {
             })
         end
     },
-	'ellisonleao/gruvbox.nvim', --theme
+	'ellisonleao/gruvbox.nvim', --gruvbox theme
     'airblade/vim-gitgutter', --show git changes in file
 	'alvan/vim-closetag', --autoclose html tags
 	'norcalli/nvim-colorizer.lua', --syntax highlighting
