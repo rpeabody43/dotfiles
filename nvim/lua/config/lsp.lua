@@ -79,6 +79,7 @@ lspconfig.clangd.setup{
 }
 lspconfig.tsserver.setup{}
 lspconfig.svelte.setup{}
+lspconfig.ocamllsp.setup{}
 
 lspconfig.gopls.setup{}
 vim.api.nvim_create_autocmd("BufWritePre", {
