@@ -42,6 +42,11 @@ vim.keymap.set('n', '<C-j>', [[<C-w>j]], {noremap = false})
 vim.keymap.set('n', '<C-k>', [[<C-w>k]], {noremap = false})
 vim.keymap.set('n', '<C-l>', [[<C-w>l]], {noremap = false})
 
+vim.cmd([[
+    nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+    nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+]])
+
 -- disable arrow keys
 for _, mode in pairs({ 'n', 'v', 'x' }) do
     for _, key in pairs({ '<Up>', '<Down>', '<Left>', '<Right>' }) do
