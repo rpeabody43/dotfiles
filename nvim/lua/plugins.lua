@@ -80,15 +80,15 @@ local plugins = {
             })
         end
     },
-	'ellisonleao/gruvbox.nvim', --gruvbox theme
+    'ellisonleao/gruvbox.nvim', --gruvbox theme
     'airblade/vim-gitgutter', --show git changes in file
-	'alvan/vim-closetag', --autoclose html tags
-	'norcalli/nvim-colorizer.lua', --syntax highlighting
-	'tiagofumo/vim-nerdtree-syntax-highlight', --file eplorer highlighting
-	'nvim-lua/plenary.nvim', --unsure what this does but seems important
-	'christoomey/vim-tmux-navigator', --easy navigation between panes
+    'alvan/vim-closetag', --autoclose html tags
+    'norcalli/nvim-colorizer.lua', --syntax highlighting
+    'tiagofumo/vim-nerdtree-syntax-highlight', --file eplorer highlighting
+    'nvim-lua/plenary.nvim', --unsure what this does but seems important
+    'christoomey/vim-tmux-navigator', --easy navigation between panes
     'bling/vim-airline', --nice status bar at bottom
-	'vim-airline/vim-airline-themes', --themes for said nice status bar at bottom
+    'vim-airline/vim-airline-themes', --themes for said nice status bar at bottom
     'windwp/nvim-autopairs', --close brackets, parentheses, etc.
     'windwp/nvim-ts-autotag',
     {
