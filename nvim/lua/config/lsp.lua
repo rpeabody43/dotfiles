@@ -77,8 +77,9 @@ lspconfig.pyright.setup{}
 lspconfig.clangd.setup{
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto","hpp"},
 }
-lspconfig.tsserver.setup{}
+lspconfig.ts_ls.setup{}
 lspconfig.svelte.setup{}
+lspconfig.ocamllsp.setup{}
 
 lspconfig.gopls.setup{}
 vim.api.nvim_create_autocmd("BufWritePre", {
