@@ -50,6 +50,10 @@
             "keys": "ctrl+v"
         },
         {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -59,8 +63,13 @@
             "keys": "alt+shift+k"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": 
@@ -70,15 +79,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+h"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -126,7 +126,8 @@
                 "colorScheme": "Tango Dark",
                 "font": 
                 {
-                    "face": "CaskaydiaMono Nerd Font"
+                    "face": "CaskaydiaMono Nerd Font",
+                    "size": 13.0
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
