@@ -59,7 +59,7 @@ local plugins = {
     },
 
     {
-        'nvim-treesitter/nvim-treesitter', --syntax highlighting
+        'nvim-treesitter/nvim-treesitter', -- syntax highlighting
         build = ':TSUpdate'
     },
 
@@ -80,19 +80,21 @@ local plugins = {
             })
         end
     },
-    'ellisonleao/gruvbox.nvim', --gruvbox theme
-    'airblade/vim-gitgutter', --show git changes in file
-    'alvan/vim-closetag', --autoclose html tags
-    'norcalli/nvim-colorizer.lua', --syntax highlighting
-    'tiagofumo/vim-nerdtree-syntax-highlight', --file eplorer highlighting
-    'nvim-lua/plenary.nvim', --unsure what this does but seems important
-    'christoomey/vim-tmux-navigator', --easy navigation between panes
-    'bling/vim-airline', --nice status bar at bottom
-    'vim-airline/vim-airline-themes', --themes for said nice status bar at bottom
-    'windwp/nvim-autopairs', --close brackets, parentheses, etc.
+    'ellisonleao/gruvbox.nvim',                 -- gruvbox theme
+    'wincent/base16-nvim',                      -- lots of themes
+    -- ^ reference: https://vimcolorschemes.com/wincent/base16-nvim
+    'airblade/vim-gitgutter',                   -- show git changes in file
+    'alvan/vim-closetag',                       -- autoclose html tags
+    'norcalli/nvim-colorizer.lua',              -- syntax highlighting
+    'tiagofumo/vim-nerdtree-syntax-highlight',  -- file explorer highlighting
+    'nvim-lua/plenary.nvim',                    -- unsure what this does but seems important
+    'christoomey/vim-tmux-navigator',           -- easy navigation between panes
+    'bling/vim-airline',                        -- nice status bar at bottom
+    'vim-airline/vim-airline-themes',           -- themes for said nice status bar at bottom
+    'windwp/nvim-autopairs',                    -- close brackets, parentheses, etc.
     'windwp/nvim-ts-autotag',
     {
-        'ryanoasis/vim-devicons', --icons for nerdtree and airline
+        'ryanoasis/vim-devicons',               -- icons for nerdtree and airline
         dependencies = {"vim-airline"}
     },
 }
