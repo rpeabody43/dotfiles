@@ -75,7 +75,11 @@ sign({name = 'DiagnosticSignInfo', text = ''})
 -- require("rust-tools").setup(rust_tools_opts)
 local lspconfig = require("lspconfig")
 -- above rust config is commented out because I think this also works
-lspconfig.rust_analyzer.setup{}
+lspconfig.rust_analyzer.setup({
+    on_attach = function(client, bufnr)
+      vim.lsp.inlay_hint.enable()
+    end
+})
 lspconfig.pyright.setup{}
 lspconfig.clangd.setup{
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto","hpp"},

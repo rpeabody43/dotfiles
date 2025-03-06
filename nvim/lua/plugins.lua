@@ -81,8 +81,6 @@ local plugins = {
         end
     },
     'ellisonleao/gruvbox.nvim',                 -- gruvbox theme
-    'wincent/base16-nvim',                      -- lots of themes
-    -- ^ reference: https://vimcolorschemes.com/wincent/base16-nvim
     'airblade/vim-gitgutter',                   -- show git changes in file
     'alvan/vim-closetag',                       -- autoclose html tags
     'norcalli/nvim-colorizer.lua',              -- syntax highlighting

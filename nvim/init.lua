@@ -5,11 +5,11 @@ local set = vim.opt
 local setg = vim.g
 
 -- colorscheme
--- require('gruvbox').setup({
---    contrast = "hard"
--- })
+require('gruvbox').setup({
+   contrast = "hard"
+})
 vim.o.background = "dark"
-vim.cmd([[colorscheme ayu-dark]])
+vim.cmd([[colorscheme gruvbox]])
 
 set.encoding = "utf-8"
 
