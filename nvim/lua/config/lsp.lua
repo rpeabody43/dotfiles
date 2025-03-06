@@ -35,51 +35,51 @@ sign({name = 'DiagnosticSignWarn', text = ''})
 sign({name = 'DiagnosticSignHint', text = ''})
 sign({name = 'DiagnosticSignInfo', text = ''})
 
--- local function on_attach(client, buffer)
---     -- callback function for when rust lsp is attached
--- end
+local function on_attach(client, buffer)
+    -- callback function for when rust lsp is attached
+end
 
 
--- local rust_tools_opts = {
---   tools = {
---     runnables = {
---       use_telescope = false,
---     },
---     inlay_hints = {
---       auto = true,
---       show_parameter_hints = false,
---       parameter_hints_prefix = "",
---       other_hints_prefix = "",
---     },
---   },
--- 
---   -- all the opts to send to nvim-lspconfig
---   -- these override the defaults set by rust-tools.nvim
---   -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
---   server = {
---     -- on_attach is a callback called when the language server attachs to the buffer
---     on_attach = on_attach,
---     settings = {
---       -- to enable rust-analyzer settings visit:
---       -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
---       ["rust-analyzer"] = {
---         -- enable clippy on save
---         checkOnSave = {
---           command = "clippy",
---         },
---       },
---     },
---   },
--- }
+local rust_tools_opts = {
+  tools = {
+    runnables = {
+      use_telescope = false,
+    },
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    },
+  },
 
--- require("rust-tools").setup(rust_tools_opts)
+  -- all the opts to send to nvim-lspconfig
+  -- these override the defaults set by rust-tools.nvim
+  -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+  server = {
+    -- on_attach is a callback called when the language server attachs to the buffer
+    on_attach = on_attach,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        -- enable clippy on save
+        checkOnSave = {
+          command = "clippy",
+        },
+      },
+    },
+  },
+}
+
+require("rust-tools").setup(rust_tools_opts)
 local lspconfig = require("lspconfig")
--- above rust config is commented out because I think this also works
-lspconfig.rust_analyzer.setup({
-    on_attach = function(client, bufnr)
-      vim.lsp.inlay_hint.enable()
-    end
-})
+-- below basic rust config is commented out because it has bad inlay hints
+-- lspconfig.rust_analyzer.setup({
+--     on_attach = function(client, bufnr)
+--       vim.lsp.inlay_hint.enable()
+--     end
+-- })
 lspconfig.pyright.setup{}
 lspconfig.clangd.setup{
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto","hpp"},
