@@ -1,3 +1,5 @@
+-- This file is a mess but it works
+
 -- Mason Setup
 require("mason").setup({
   ensure_installed = {
@@ -89,6 +91,10 @@ lspconfig.svelte.setup{}
 lspconfig.ocamllsp.setup{}
 
 lspconfig.gopls.setup{}
+
+require("nvim-autopairs").setup{}
+require('nvim-ts-autotag').setup()
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()

@@ -5,10 +5,10 @@ local set = vim.opt
 local setg = vim.g
 
 -- colorscheme
+vim.o.background = "dark"
 require('gruvbox').setup({
    contrast = "hard"
 })
-vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
 set.encoding = "utf-8"
@@ -21,8 +21,6 @@ set.smartindent = true
 set.smarttab = true
 set.colorcolumn = "81";
 
-require("nvim-autopairs").setup {}
-require('nvim-ts-autotag').setup()
 
 set.mouse = "a"
 
@@ -61,56 +59,3 @@ set.directory="~/vimtmp//,."
 set.completeopt = {'menuone', 'noselect', 'noinsert'}
 set.shortmess = set.shortmess + { c = true }
 vim.api.nvim_set_option('updatetime', 300)
-
-
-local cmp = require("cmp")
-cmp.setup({
-  preselect = cmp.PreselectMode.None,
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end,
-  },
-  mapping = {
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-n>"] = cmp.mapping.select_next_item(),
-    -- Add tab support
-    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-    ["<Tab>"] = cmp.mapping.select_next_item(),
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-Space>"] = cmp.mapping.complete(),
-    ["<C-e>"] = cmp.mapping.close(),
-    ["<CR>"] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
-    }),
-  },
-
-  -- Installed sources
-  sources = {
-    { name = "nvim_lsp" },
-    { name = "vsnip" },
-    { name = "path" },
-    { name = "buffer" },
-  },
-})
-
--- Treesitter Plugin Setup 
-require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml" },
-  auto_install = true,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting=false,
-  },
-  indent = { enable = true }, 
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  }
-}
-
--- Neo-Tree Setup
-vim.keymap.set('n', '<C-b>', ':Neotree toggle <CR>')
