@@ -8,6 +8,8 @@ vim.g.airline_right_alt_sep = ''
 
 vim.g.airline_theme = "wombat"
 
+vim.g['airline#extensions#whitespace#enabled'] = 0
+
 -- cmp setup
 local cmp = require("cmp")
 cmp.setup({
