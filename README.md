@@ -42,6 +42,22 @@ uhhhhhh
   ```
   make-link "root" "destination"
   ```
+## Hyprland Binds Reference
+| Bind | Function |
+|--|--|
+| Alt + Enter | Terminal (kitty) |
+| Ctrl + Enter | Terminal in same dir|
+| Alt + Ctrl + Enter | Launcher (wofi) |
+| Alt + E | File Explorer (thunar) |
+| Alt + Backspace | Exit program |
+| Alt + F | Toggle floating |
+| Alt + P | Toggle pseudo |
+| Alt + T | Toggle split direction |
+| Alt + M | Exit Hyprland |
+| Alt + [1-9] | Switch workspace |
+| Alt + Shift + [1-9] | Move app to workspace |
+| Alt + Mouse1 | Move window |
+| Alt + Mouse2 | Resize window |
 
 ## TODO
 - Make a proper install script
