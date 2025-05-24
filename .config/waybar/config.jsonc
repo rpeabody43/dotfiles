@@ -168,7 +168,7 @@
 //            "phone": "",
 //            "portable": "",
 //            "car": "",
-            "default": ["", "", ""]
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol",
         "on-click-right": "foot -a pw-top pw-top"
