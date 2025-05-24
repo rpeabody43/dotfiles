@@ -53,7 +53,7 @@ uhhhhhh
 | Alt + F | Toggle floating |
 | Alt + P | Toggle pseudo |
 | Alt + T | Toggle split direction |
-| Alt + M | Exit Hyprland |
+| Ctrl + Alt + Del | Exit Hyprland |
 | Alt + [1-9] | Switch workspace |
 | Alt + Shift + [1-9] | Move app to workspace |
 | Alt + Mouse1 | Move window |
