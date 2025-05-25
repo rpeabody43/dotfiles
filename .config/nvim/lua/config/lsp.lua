@@ -87,6 +87,7 @@ vim.diagnostic.config({
         prefix = '',
     },
     signs = {
+        priority = 100, -- Higher priority than git signs
         text = {
             [vim.diagnostic.severity.ERROR] = " ",
             [vim.diagnostic.severity.WARN] = " ",
