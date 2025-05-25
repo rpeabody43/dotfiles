@@ -1,4 +1,5 @@
 stow
+base-devel
 openssh
 git
 zsh
@@ -26,3 +27,11 @@ unzip
 grim
 slurp
 wl-clipboard
+blueman
+linux-firmware
+usbutils
+noto-fonts
+noto-fonts-extra
+noto-fonts-emoji
+udisks2
+udiskie
