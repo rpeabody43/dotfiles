@@ -35,3 +35,6 @@ noto-fonts-extra
 noto-fonts-emoji
 udisks2
 udiskie
+nwg-look
+thunar-archive-plugin
+xarchiver
