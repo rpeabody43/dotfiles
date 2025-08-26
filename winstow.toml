@@ -1,0 +1,23 @@
+[".config"]
+"nvim" = "~/AppData/Local/nvim"
+
+[windows]
+".bashrc-win" = "~/.bashrc"
+
+[windows.powershell]
+"windows-terminal-settings.json" = """\
+    ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/\
+    LocalState/settings.json\
+    """
+"Microsoft.PowerShell_profile.ps1" = [
+    "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1",
+    "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1"
+]
+
+[windows.counterstrike]
+path = """\
+    C:/Program Files (x86)/Steam/steamapps/common/\
+    Counter-Strike Global Offensive/game/csgo/cfg/\
+    """
+linkall = true
+copy = true
