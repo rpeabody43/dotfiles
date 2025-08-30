@@ -36,12 +36,11 @@ well structured / commented / attributed !
 
 ## Setup (Windows)
 
-uhhhhhh
+- use [winstow](https://github.com/rpeabody43/winstow) to automatically create symlinks based on `winstow.toml`
+  ```
+  winstow
+  ```
 
-- use the `make-link` function to manually symlink things
-  ```
-  make-link "root" "destination"
-  ```
 ## Hyprland Binds Reference
 | Bind | Function |
 |--|--|
