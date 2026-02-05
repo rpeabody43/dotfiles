@@ -93,6 +93,7 @@ local plugins = {
             instructions_file = "avante.md",
             -- for example
             provider = "copilot",
+            mode = "legacy", -- prevent the agent from doing things on its own
             input = {
                 provider = "snacks",
                 provider_opts = {
