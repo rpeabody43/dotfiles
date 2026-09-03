@@ -17,7 +17,6 @@ set.tabstop = 4
 set.shiftwidth = 4
 set.softtabstop = 4
 set.expandtab = true
-set.smartindent = true
 set.smarttab = true
 set.colorcolumn = "81";
 

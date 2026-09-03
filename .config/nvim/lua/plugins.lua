@@ -58,8 +58,33 @@ local plugins = {
     },
 
     {
-        'nvim-treesitter/nvim-treesitter', -- syntax highlighting
-        build = ':TSUpdate'
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        build = ":TSUpdate",
+        config = function()
+            local langs = { "lua", "rust", "toml", "c" }
+
+            -- Ensuring treesitter provided highlighting and indent fail silent
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "*",
+                callback = function(ev)
+                    pcall(vim.treesitter.start, ev.buf)
+                end,
+            })
+
+            -- experimental feature, breaks my c indentation.
+            -- vim.api.nvim_create_autocmd("FileType", {
+            --     pattern = "*",
+            --     callback = function(ev)
+            --         pcall(vim.treesitter.start, ev.buf)
+            --         
+            --         local lang = vim.treesitter.language.get_lang(ev.match) or ev.match
+            --         if vim.treesitter.query.get(lang, "indents") then
+            --             vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            --         end
+            --     end,
+            -- })
+          end,
     },
 
     {
