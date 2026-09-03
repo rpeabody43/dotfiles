@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    
 
     {
         "j-hui/fidget.nvim",
@@ -31,7 +30,7 @@ local plugins = {
 
     'hrsh7th/cmp-nvim-lua',
     'hrsh7th/cmp-nvim-lsp-signature-help',
-    'hrsh7th/cmp-vsnip',                   
+    'hrsh7th/cmp-vsnip',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-buffer',
     'hrsh7th/vim-vsnip',
@@ -40,7 +39,7 @@ local plugins = {
     'simrat39/rust-tools.nvim',
 
     {
-        'kevinhwang91/nvim-ufo', 
+        'kevinhwang91/nvim-ufo',
         dependencies = 'kevinhwang91/promise-async',
         init = function()
             vim.o.foldcolumn = '1' -- '0' is not bad
@@ -64,7 +63,7 @@ local plugins = {
     },
 
     {
-        "nvim-neo-tree/neo-tree.nvim",
+        "nvim-neo-tree/neo-tree.nvim", -- file selector
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
@@ -80,6 +79,41 @@ local plugins = {
             })
         end
     },
+
+    {
+        "yetone/avante.nvim", -- AI integration
+        build = vim.fn.has("win32") ~= 0
+            and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+            or "make",
+        event = "VeryLazy",
+        version = false, -- Never set this value to "*"! Never!
+        opts = {
+            -- add any opts here
+            -- this file can contain specific instructions for your project
+            instructions_file = "avante.md",
+            -- for example
+            provider = "copilot",
+            mode = "legacy", -- prevent the agent from doing things on its own
+            input = {
+                provider = "snacks",
+                provider_opts = {
+                    -- Additional snacks.input options
+                    title = "Avante Input",
+                    icon = " ",
+                },
+            },
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            --- The below dependencies are optional,
+            "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+            "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+            "zbirenbaum/copilot.lua", -- for copilot
+            "folke/snacks.nvim", -- for input provider snacks
+        },
+    },
+
     'ellisonleao/gruvbox.nvim',                 -- gruvbox theme
     'sekke276/dark_flat.nvim',                  -- dark flat theme
     'airblade/vim-gitgutter',                   -- show git changes in file
@@ -95,6 +129,11 @@ local plugins = {
     {
         'ryanoasis/vim-devicons',               -- icons for nerdtree and airline
         dependencies = {"vim-airline"}
+    },
+    'chrisgrieser/nvim-lsp-endhints',            -- show inlay hints after the line
+    {
+        "zbirenbaum/copilot.lua",                    -- github copilot
+        dependencies = {"copilotlsp-nvim/copilot-lsp"}
     },
 }
 

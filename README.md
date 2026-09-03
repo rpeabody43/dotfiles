@@ -36,12 +36,27 @@ well structured / commented / attributed !
 
 ## Setup (Windows)
 
-uhhhhhh
+- use [winstow](https://github.com/rpeabody43/winstow) to automatically create symlinks based on `winstow.toml`
+  ```
+  winstow
+  ```
 
-- use the `make-link` function to manually symlink things
-  ```
-  make-link "root" "destination"
-  ```
+## Hyprland Binds Reference
+| Bind | Function |
+|--|--|
+| Alt + Enter | Terminal (kitty) |
+| Ctrl + Enter | Terminal in same dir|
+| Alt + Ctrl + Enter | Launcher (wofi) |
+| Alt + E | File Explorer (thunar) |
+| Alt + Backspace | Exit program |
+| Alt + F | Toggle floating |
+| Alt + P | Toggle pseudo |
+| Alt + T | Toggle split direction |
+| Ctrl + Alt + Del | Exit Hyprland |
+| Alt + [1-9] | Switch workspace |
+| Alt + Shift + [1-9] | Move app to workspace |
+| Alt + Mouse1 | Move window |
+| Alt + Mouse2 | Resize window |
 
 ## TODO
 - Make a proper install script

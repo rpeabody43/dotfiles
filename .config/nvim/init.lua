@@ -58,4 +58,4 @@ set.directory="~/vimtmp//,."
 
 set.completeopt = {'menuone', 'noselect', 'noinsert'}
 set.shortmess = set.shortmess + { c = true }
-vim.api.nvim_set_option('updatetime', 300)
+vim.api.nvim_set_option_value('updatetime', 300, {})
