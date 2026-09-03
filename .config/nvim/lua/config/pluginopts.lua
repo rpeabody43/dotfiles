@@ -69,7 +69,3 @@ vim.filetype.add({
 
 -- Neo-Tree Setup
 vim.keymap.set('n', '<C-b>', ':Neotree toggle <CR>')
-
-vim.g.copilot_proxy_strict_ssl = false
-local copilot = require("copilot")
-copilot.setup{}
