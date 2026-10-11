@@ -1,23 +1,20 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
             "command": "find",
             "id": "User.find"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "moveFocus",
                 "direction": "down"
             },
             "id": "User.moveFocus.F747588A"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -25,16 +22,14 @@
             "id": "User.splitPane.A6751878"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
             "id": "User.copy.644BA8F2"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "up",
                 "splitMode": "duplicate"
@@ -42,24 +37,21 @@
             "id": "User.splitPane.7A967A9"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "moveFocus",
                 "direction": "left"
             },
             "id": "User.moveFocus.2A0DA8E0"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "moveFocus",
                 "direction": "up"
             },
             "id": "User.moveFocus.6CD791B"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "down",
                 "splitMode": "duplicate"
@@ -67,8 +59,7 @@
             "id": "User.splitPane.10B260D2"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "right",
                 "splitMode": "duplicate"
@@ -76,8 +67,7 @@
             "id": "User.splitPane.FEF0D40B"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "left",
                 "splitMode": "duplicate"
@@ -93,8 +83,7 @@
             "id": "User.paste"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "moveFocus",
                 "direction": "right"
             },
@@ -104,8 +93,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "keybindings": 
-    [
+    "keybindings": [
         {
             "id": "User.moveFocus.F747588A",
             "keys": "alt+j"
@@ -163,21 +151,17 @@
             "keys": "alt+k"
         }
     ],
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
+    "profiles": {
         "defaults": {},
-        "list": 
-        [
+        "list": [
             {
                 "colorScheme": "Tango Dark",
-                "font": 
-                {
+                "font": {
                     "face": "CaskaydiaMono Nerd Font",
                     "size": 12
                 },
@@ -189,20 +173,20 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "font": 
-                {
+                "font": {
                     "face": "CaskaydiaMono Nerd Font"
                 },
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "Ubuntu",
+                "padding": "0",
+                "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl"
             },
             {
                 "colorScheme": "Tango Dark",
                 "commandline": "ssh -X rpeabod1@grace.umd.edu",
-                "font": 
-                {
+                "font": {
                     "face": "CaskaydiaMono Nerd Font"
                 },
                 "guid": "{b6da6505-c153-4b93-9ec2-e1f1299fc02d}",
@@ -219,8 +203,7 @@
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "font": 
-                {
+                "font": {
                     "face": "Hack Nerd Font"
                 },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -231,8 +214,7 @@
                 "colorScheme": "Tango Dark",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
                 "elevate": true,
-                "font": 
-                {
+                "font": {
                     "face": "Hack Nerd Font"
                 },
                 "guid": "{875879c3-5dbd-4a3f-b642-c91f6e5ce9f2}",
@@ -249,8 +231,7 @@
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "cursorShape": "bar",
                 "elevate": true,
-                "font": 
-                {
+                "font": {
                     "face": "Cascadia Mono",
                     "size": 12
                 },
@@ -269,6 +250,18 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "commandline": "%WINDIR%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\Ryan\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\Ryan\\miniconda3' \"",
+                "name": "Anaconda PowerShell Prompt (miniconda3)",
+                "icon": "C:\\Users\\Ryan\\miniconda3\\Menu\\anaconda_powershell_prompt.ico",
+                "startingDirectory": "C:\\Users\\Ryan"
+            },
+            {
+                "commandline": "%WINDIR%\\System32\\cmd.exe \"/K\" C:\\Users\\Ryan\\miniconda3\\Scripts\\activate.bat C:\\Users\\Ryan\\miniconda3",
+                "name": "Anaconda Prompt (miniconda3)",
+                "icon": "C:\\Users\\Ryan\\miniconda3\\Menu\\anaconda_prompt.ico",
+                "startingDirectory": "C:\\Users\\Ryan"
             }
         ]
     },
